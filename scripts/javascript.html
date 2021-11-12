@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Exercises</title>
+    </head>
+    <body>
+    <h1>JavaScript Exercises</h1>
+
+    <h2>Hello World</h2>
+    <button onclick="helloWorld()">Hello World!</button>
+
+    <h2>Hello Breanna</h2>
+    <button onclick="hello('Breanna')">Hello Breanna</button>
+
+    <h2>Hello Name</h2>
+    <button onclick="helloName()">Hello Name</button>
+
+    <h2>Hello confirm</h2>
+    <button onclick="helloConfirm()">Hello confirm</button>
+
+    <h2>Count to Ten</h2>
+    <button onclick="CounttoTen()">Count to Ten</button>
+
+    <h2>Change Div Color</h2>
+    <div id="change-color-target" class="target"></div>
+    <div class="change-color-btn">
+        <button onclick="changeColor()">Change the DIV</button>
+    </div>
+    
+
+    <h2>Move Div Using a Class</h2>
+    <div id="move-div-target" class="target"></div>
+    <div class="move-div-btn-div">
+        <button onclick="moveDivWithClass()"id="move-div-btn">Move the DIV</button>
+    </div>
+
+
+    
+
+    <script>
+        function helloWorld(){
+            alert("Hello world!");
+        }
+
+
+        function hello(name){
+            alert("hello"+name+"!");
+        }
+
+        function helloName(){
+            var name =prompt("Enter your name");
+            alert("hello"+name+"!");
+        }
+
+
+    function helloConfirm(){
+        var name = prompt("Enter Your Name");
+        var confirmed= confirm("Are you sure"+"is your name");
+    
+        if (confirmed){
+            alert("Hello"+ name+ "!");
+        }
+        else{
+            name=prompt("Enter your name");
+            confirmed= confirm("Are you sure that's your name")
+            if(confirmed){
+                alert("Hello"+ name+ "!");
+            }
+        }
+    }
+    function CounttoTen(){
+        for(var i = 1; i<= 10; i++){
+            alert (i);
+        }
+       
+    }
+
+    function changeColor(){
+  document.getElementById("change-color-target").style.backgroundColor="#fc0";
+    }
+
+    function moveDivWithClass(){
+    document.getElementById("move-div-target").classList.toggle("moved");
+    }
+    
+    </script>
+    </body>
+</html>
